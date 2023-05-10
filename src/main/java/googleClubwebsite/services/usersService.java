@@ -10,7 +10,7 @@ import googleClubwebsite.models.users;
 public interface usersService {
 	public users getUserById(long id);
 	public List<users> getAllUsers();
-	public users getUserByUsername(String username);
+	
 	public users updateUser(users form);
 	public users addUser(users form);
 }

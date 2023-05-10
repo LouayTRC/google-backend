@@ -1,5 +1,7 @@
 package googleClubwebsite.repositories;
 
+
+
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,8 +11,7 @@ import googleClubwebsite.models.events;
 @Repository
 public interface eventRepo extends JpaRepository<events,Long>{
 
-	List<events> findActive();
+	List<events> findByActive(boolean active);
 
-	List<events> findExpired();
 
 }

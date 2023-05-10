@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("USERS")
+@RequestMapping("users")
 @CrossOrigin("*")
 @RestController
 public class userController {
@@ -32,18 +31,13 @@ public class userController {
 		return usersService.getAllUsers();
 	}
 	
-	@GetMapping
-	public users getUserByUsername(@RequestParam String username) {
-		return usersService.getUserByUsername(username);
-	}
-	
 	@PutMapping()
 	public users updateUser(@RequestBody users form) {
 		return usersService.updateUser(form);
 	}
 	
-	@PostMapping
-	public users addUser(users form) {
+	@PostMapping()
+	public users addUser(@RequestBody users form) {
 		return usersService.addUser(form);
 	}
 

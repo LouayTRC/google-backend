@@ -10,15 +10,14 @@ import googleClubwebsite.services.usersService;
 
 @Service
 public class userServiceImpl implements usersService {
+	@Autowired
+	private usersRepo usersRepo;
 	
 	@Override
 	public users addUser(users form) {
 		// TODO Auto-generated method stub
 		return usersRepo.save(form);
 	}
-
-	@Autowired
-	private usersRepo usersRepo;
 	
 	@Override
 	public users getUserById(long id) {
@@ -33,17 +32,14 @@ public class userServiceImpl implements usersService {
 		return usersRepo.findAll();
 	}
 
-	@Override
-	public users getUserByUsername(String username) {
-		// TODO Auto-generated method stub
-		Optional <users> user=usersRepo.findByUsername(username);
-		return user.isPresent() ? user.get() : null;
-	}
 
 	@Override
 	public users updateUser(users form) {
 		// TODO Auto-generated method stub
 		return usersRepo.save(form);
 	}
+
+	
+	
 	
 }

@@ -27,7 +27,7 @@ public class events {
 		return "events [id=" + id + ", nameEvent=" + nameEvent + ", dateEvent=" + dateEvent + ", description="
 				+ description + ", place=" + place + ", active=" + active + "]";
 	}
-	public events(String nameEvent, String dateEvent, String description, String place, String active) {
+	public events(String nameEvent, String dateEvent, String description, String place, boolean active) {
 		super();
 		this.nameEvent = nameEvent;
 		this.dateEvent = dateEvent;
@@ -38,9 +38,6 @@ public class events {
 	public events() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public void setId(Long id) {
-		this.id = id;
 	}
 	public String getNameEvent() {
 		return nameEvent;
@@ -66,10 +63,14 @@ public class events {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public String getActive() {
+	public boolean isActive() {
 		return active;
 	}
-	public void setActive(String active) {
+	public void setActive(boolean active) {
 		this.active = active;
 	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 }

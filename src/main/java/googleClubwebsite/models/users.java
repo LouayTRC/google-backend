@@ -19,26 +19,26 @@ public class users {
 	private String mail;
 	private String password;
 	private String role;
-	private boolean statue;
 	private int score;
 	
 	
 	public Long getId() {
 		return id;
 	}
+	
 	@Override
 	public String toString() {
 		return "users [id=" + id + ", name=" + name + ", username=" + username + ", mail=" + mail + ", password="
-				+ password + ", role=" + role + ", statue=" + statue + ", score=" + score + "]";
+				+ password + ", role=" + role + ", score=" + score + "]";
 	}
-	public users(String name, String username, String mail, String password, String role, boolean statue, int score) {
+
+	public users(String name, String username, String mail, String password, String role, int score) {
 		super();
 		this.name = name;
 		this.username = username;
 		this.mail = mail;
 		this.password = password;
 		this.role = role;
-		this.statue = statue;
 		this.score = score;
 	}
 	public users() {
@@ -77,12 +77,6 @@ public class users {
 	}
 	public void setRole(String role) {
 		this.role = role;
-	}
-	public boolean isStatue() {
-		return statue;
-	}
-	public void setStatue(boolean statue) {
-		this.statue = statue;
 	}
 	public int getScore() {
 		return score;

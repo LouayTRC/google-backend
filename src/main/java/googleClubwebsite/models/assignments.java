@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 	
 @Entity
-@Table(name="ASSIGNMENTS")
+@Table(name="assignments")
 public class assignments {
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
@@ -16,18 +16,18 @@ public class assignments {
 	private String description;
 	private String deadline;
 	private int score;
-	private boolean active;
+	private boolean statue;
 	public assignments() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public assignments(String title, String description, String deadline, int score, boolean active) {
+	public assignments(String title, String description, String deadline, int score, boolean statue) {
 		super();
 		this.title = title;
 		this.description = description;
 		this.deadline = deadline;
 		this.score = score;
-		this.active = active;
+		this.statue = statue;
 	}
 	public Long getId() {
 		return id;
@@ -59,16 +59,16 @@ public class assignments {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public boolean isActive() {
-		return active;
+	public boolean isStatue() {
+		return statue;
 	}
-	public void setActive(boolean active) {
-		this.active = active;
+	public void setStatue(boolean statue) {
+		this.statue = statue;
 	}
 	@Override
 	public String toString() {
 		return "assignments [id=" + id + ", title=" + title + ", description=" + description + ", deadline=" + deadline
-				+ ", score=" + score + ", active=" + active + "]";
+				+ ", score=" + score + ", statue=" + statue + "]";
 	}
 	
 }
